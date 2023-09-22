@@ -34,8 +34,7 @@ exports.handler = function (event, context, callback) {
     .then((response) => {
       console.log("inside success");
       console.log(response);
-      // callback(null, { statusCode: response[0].statusCode });
-      callback(null, { statusCode: 200 });
+      callback(null, { statusCode: response[0].statusCode });
     })
     .catch((err) => callback(err, null));
 };

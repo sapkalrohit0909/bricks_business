@@ -427,6 +427,7 @@
         var email = document.getElementById("email").value;
         var message = document.getElementById("message").value;
         var phoneNumber = document.getElementById("phoneNumber").value;
+        var form = document.getElementById("enquiryForm");
         try {
           const response = await axios.post("/.netlify/functions/sendgrid", {
             message:
@@ -444,8 +445,10 @@
               message,
           });
           alert("Thanks for contacting us. We will reach out to you soon.");
+          form.reset();
         } catch (e) {
           alert("Your message could not be sent. Sorry about that.");
+          form.reset();
         }
       }
     </script>
