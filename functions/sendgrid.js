@@ -8,7 +8,7 @@ function sendEmail(client, message, senderEmail, senderName) {
         name: senderName,
       },
       subject: "Bricks Enquiry",
-      to: "sapkalrohit007@gmail.com",
+      to: "siddhivinayakbrick@gmail.com",
       html: `New Bricks Enquiry<br/>${message}`,
     };
 
